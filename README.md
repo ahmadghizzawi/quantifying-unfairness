@@ -1,4 +1,8 @@
 # Quantifying Unfairness using EMD
+This code implements the _BALANCED_ and _UNBALANCED_ algorithms described in the following paper:
+
+Shady Elbassuoni, Sihem Amer-Yahia, Ahmad Ghizzawi, Christine El Atie. 
+[Exploring Fairness of Ranking in Online Job Marketplaces](https://openproceedings.org/2019/conf/edbt/EDBT19_paper_230.pdf). 
 
 # Prerequisites
 - Python 3
@@ -16,9 +20,9 @@ After installing and running your local MongoDB instance, run ```python common/a
 
 # Usage
 ```
-python run_experiments.py [-h] -q {emd,kl} [-c {transparent,opaque_process}]
+python run_experiments.py [-h] [-c {transparent,opaque_process}]
                           [-w WORKERS] [-b {auto,preset}] [-n NORMALIZE]
-                          [-r {min,max,avg}] [-s {standardization,minmax}]
+                          [-r {min,max,avg}]
 ```
 
 The following params can be set:
@@ -44,7 +48,10 @@ EMD specific arguments.:
 ```
 
 ## Example
-If you want to run the experiments with an opaque_process configuration using EMD, with 500 workers, 
+If you want to run the experiments with a transparent configuration using EMD, with 500 workers, 
 with normalization, with auto bins, and with avg as the criterion you'll run the following command:
 
-```python run_experiments.py -q emd -c opaque_process -w 500 -n True -b preset -r avg```
+```python run_experiments.py -c transparent -w 500 -n True -b preset -r avg```
+
+Please note that this might take up to 1 hour to terminate. A txt file will be generated at the end of the run containing
+a table of the results.
