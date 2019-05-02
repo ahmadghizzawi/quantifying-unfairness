@@ -1,0 +1,10 @@
+python-slugify
+pandas
+beautifultable
+pyemd
+seaborn
+matplotlib
+scipy
+numpy
+pymongo
+scikit_learn
