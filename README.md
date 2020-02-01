@@ -6,6 +6,7 @@ Shady Elbassuoni, Sihem Amer-Yahia, Ahmad Ghizzawi, Christine El Atie.
 
 # Prerequisites
 - Python 3
+- MongoDB
 
 ## Dependencies
 ```pip install -r requirements.txt```
